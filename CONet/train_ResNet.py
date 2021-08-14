@@ -314,7 +314,7 @@ def run_trials(epochs, output_path_train, new_threshold=None):
 
         new_channel_sizes, delta_percentage, last_operation, factor_scale, \
         cell_list_rank  = \
-            delta_scaling(conv_size_list, GLOBALS.CONFIG['delta_threshold'], \
+            delta_scaling(conv_size_list, GLOBALS.CONFIG['delta_threshold'], GLOBALS.CONFIG['factor_scale'],\
                             GLOBALS.CONFIG['min_scale_limit'], GLOBALS.CONFIG['mapping_condition_threshold'], \
                             GLOBALS.CONFIG['min_conv_size'], GLOBALS.CONFIG['max_conv_size'],
                             trial_dir, i - 1, last_operation, factor_scale)

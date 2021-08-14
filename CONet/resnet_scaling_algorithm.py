@@ -238,7 +238,7 @@ def initialize_algorithm(conv_list):
     for cell in conv_list:
         cell_adjustable_convs = len(cell)
         cell_op = np.zeros(cell_adjustable_convs,dtype=int)
-        cell_factor = np.full(cell_adjustable_convs,0.2)
+        cell_factor = np.full(cell_adjustable_convs,factor_scale)
         prev_op_list.append(copy.deepcopy(cell_op))
         factor_list.append((copy.deepcopy(cell_factor)))
     return prev_op_list, factor_list
@@ -249,12 +249,12 @@ def round_even(number):
 
 # returns new conv_size_list, and previous operation and scaling
 # chan sizes are rounded to nearest even int
-def channel_size_adjust_algorithm(conv_size_list, delta_threshold, min_scale_limit, map_cond_threshold, min_conv_size, max_conv_size,
+def channel_size_adjust_algorithm(conv_size_list, delta_threshold, factor_scale, min_scale_limit, map_cond_threshold, min_conv_size, max_conv_size,
                                     trial_dir, cur_trial, cell_layer_prev_ops, cell_layer_factor):
     first_trial = False
     if len(cell_layer_prev_ops) == 0 or cell_layer_prev_ops == None:
         first_trial = True
-        cell_layer_prev_ops, cell_layer_factor = initialize_algorithm(conv_size_list)
+        cell_layer_prev_ops, cell_layer_factor = initialize_algorithm(conv_size_list, factor_scale)
 
     # get the avg rank slope of each adjustable channel sizes
     cells_first_layer_idx = find_cell_first_conv_idx(conv_size_list)

@@ -406,27 +406,27 @@ def round_even(number):
 
 # provide cell_list or sep_conv_list to generate a prev operation list and factor list
 # prev_op initalized to be 0 (do nothing/stop), factor_list inialized to be 0.2 (maximum)
-def initialize_algorithm(conv_list):
+def initialize_algorithm(conv_list, factor_scale):
     prev_op_list = list()
     factor_list = list()
     for cell in conv_list:
         cell_adjustable_convs = len(cell)
         cell_op = np.zeros(cell_adjustable_convs,dtype=int)
-        cell_factor = np.full(cell_adjustable_convs,0.2)
+        cell_factor = np.full(cell_adjustable_convs,factor_scale)
         prev_op_list.append(copy.deepcopy(cell_op))
         factor_list.append((copy.deepcopy(cell_factor)))
     return copy.deepcopy(prev_op_list),copy.deepcopy(factor_list)
 
 # returns new cell_list, sep_conv_list, and previous operation and scaling for both lists
 # chan sizes are rounded to nearest even int
-def channel_size_adjust_algorithm(cell_list,sep_conv_list,delta_threshold,min_scale_limit,map_cond_threshold,
+def channel_size_adjust_algorithm(cell_list,sep_conv_list,delta_threshold, factor_scale, min_scale_limit,map_cond_threshold,
                                   min_conv_size,max_conv_size,trial_dir,cur_trial,cell_list_prev_ops=None,
                                   cell_list_factor=None,sep_conv_list_prev_ops=None,sep_conv_list_factor=None):
     first_trial = False
     if len(cell_list_prev_ops) == 0 or cell_list_prev_ops == None:
         first_trial = True
-        cell_list_prev_ops,cell_list_factor = initialize_algorithm(cell_list)
-        sep_conv_list_prev_ops,sep_conv_list_factor = initialize_algorithm(sep_conv_list)
+        cell_list_prev_ops,cell_list_factor = initialize_algorithm(cell_list, factor_scale)
+        sep_conv_list_prev_ops,sep_conv_list_factor = initialize_algorithm(sep_conv_list, factor_scale)
     # assert len(sep_conv_list_prev_ops) != 0 and sep_conv_list_prev_ops != None
 
     # get the avg rank slope of each adjustable channel sizes

@@ -360,7 +360,7 @@ def run_trials_DARTS(epochs,output_path_train):
         if GLOBALS.CONFIG['network'] == 'DARTS':
             new_cell_list,new_sep_conv_list, cell_list_average_slope, cell_list_prev_ops,cell_list_factor, \
             sep_conv_list_average_slope, sep_conv_list_prev_ops,sep_conv_list_factor, cell_list_rank, sep_conv_list_rank = \
-                DARTS_algorithm (current_cell_list ,current_sep_conv_list ,GLOBALS.CONFIG['delta_threshold'], \
+                DARTS_algorithm (current_cell_list ,current_sep_conv_list ,GLOBALS.CONFIG['delta_threshold'], GLOBALS.CONFIG['factor_scale'],\
                                              GLOBALS.CONFIG['min_scale_limit'],GLOBALS.CONFIG['mapping_condition_threshold'], \
                                                GLOBALS.CONFIG['min_conv_size'], GLOBALS.CONFIG['max_conv_size'],
                                                 trial_dir,i-1,cell_list_prev_ops ,cell_list_factor ,
@@ -368,7 +368,7 @@ def run_trials_DARTS(epochs,output_path_train):
         elif GLOBALS.CONFIG['network'] == 'DARTSPlus':
             new_cell_list, new_sep_conv_list, cell_list_average_slope, cell_list_prev_ops, cell_list_factor, \
             sep_conv_list_average_slope, sep_conv_list_prev_ops, sep_conv_list_factor, cell_list_rank, sep_conv_list_rank = \
-                DARTSPlus_algorithm(current_cell_list, current_sep_conv_list, GLOBALS.CONFIG['delta_threshold'], \
+                DARTSPlus_algorithm(current_cell_list, current_sep_conv_list, GLOBALS.CONFIG['delta_threshold'], GLOBALS.CONFIG['factor_scale'],\
                                 GLOBALS.CONFIG['min_scale_limit'], GLOBALS.CONFIG['mapping_condition_threshold'], \
                                 GLOBALS.CONFIG['min_conv_size'], GLOBALS.CONFIG['max_conv_size'],
                                 trial_dir, i - 1, cell_list_prev_ops, cell_list_factor,
