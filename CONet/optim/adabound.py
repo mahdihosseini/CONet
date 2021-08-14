@@ -19,7 +19,8 @@ class AdaBound(Optimizer):
             numerical stability (default: 1e-8)
         weight_decay (float, optional): weight decay (L2 penalty) (default: 0)
         amsbound (boolean, optional): whether to use the AMSBound variant of this algorithm
-    .. Adaptive Gradient Methods with Dynamic Bound of Learning Rate
+    .. Adaptive Gradient Methods with Dynamic Bound of Learning Rate:
+        https://openreview.net/forum?id=Bkg3g2R9FX
     """
 
     def __init__(self, params, lr=1e-3, betas=(0.9, 0.999), final_lr=0.1, gamma=1e-3,
