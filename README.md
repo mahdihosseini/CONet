@@ -26,8 +26,8 @@ Comparison of CONet results optimizing the [DARTS](https://github.com/quark0/dar
 on CIFAR10 (left) and CIFAR100 (right).
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/43189683/129463282-1f009fe5-28cf-4151-9cc0-b1fbfec19a53.png" width="300"  title="Angular" />
-  <img src="https://user-images.githubusercontent.com/43189683/129463283-89b7bf22-7517-4004-a676-1fe023943414.png" width="290" /> 
+  <img src="https://user-images.githubusercontent.com/43189683/129463282-1f009fe5-28cf-4151-9cc0-b1fbfec19a53.png" width="400"  title="Angular" />
+  <img src="https://user-images.githubusercontent.com/43189683/129463283-89b7bf22-7517-4004-a676-1fe023943414.png" width="390" /> 
   </p>
 
 
