@@ -17,7 +17,7 @@ CONet expands/shrinks the channels of convolutional layers based on local indica
 
 
 <p align="center">
-   <img src="https://user-images.githubusercontent.com/43189683/129463034-e6685296-9c53-47d0-965e-011a6f728916.png" >
+   <img src="https://user-images.githubusercontent.com/43189683/129463034-e6685296-9c53-47d0-965e-011a6f728916.png" width="600" >
 </p>
 
 
