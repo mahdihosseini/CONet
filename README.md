@@ -1,7 +1,45 @@
 # CONet: Channel Optimization for Convolutional Neural Networks #
 
+**Exciting News! CONet has been accepted to ICCV 2021 Workshop: Neural Architectures - Past, Present and Future.**
+
+```
+@inproceedings{hosseini2021conet,
+  title={CONet: Channel Optimization for Convolutional Neural Networks},
+  author={Hosseini, Mahdi S and Zhang, Jia Shu and Liu, Zhe Ming and Fu, Andre and Su, Jingxuan and Tuli, Mathieu and Plataniotis, Konstantinos N},
+  booktitle={},
+  pages={},
+  year={}
+}
+```
+
+**CONet** is a NAS algorithm for optimizing the channel sizes of Convolutional Neural Networks.
+CONet expands/shrinks the channels of convolutional layers based on local indicators after a few epochs of training.
+
+<p align="center">
+</p>
+
+### CIFAR10/100 Results ###
+Comparison of CONet results optimizing the [DARTS](https://github.com/quark0/darts/) and [ResNet34](https://github.com/KaimingHe/deep-residual-networks)
+on CIFAR10 and CIFAR100.
+
+<p align="center">
+</p>
+
+### ImageNet Results ###
+Comparison of CONet results for optimizing the [DARTS](https://github.com/quark0/darts/) model.
+All DARTS models shown use 14 cells. 
+
+The **Delta** and  **Dataset** columns refer to the delta threshold values and datasets used for 
+CONet respectively. _Baseline_ refers to the original DARTS model.
+
+| Delta  | Dataset | Params (M)          |  Top-1 Acc (%)  | Top-5 Acc (%)  |
+| ------------------ | :---: | :-------------:| :-----:| :----:|
+| Baseline   | -   | 4.7 | 73.3 | 91.3
+| 0.0075	 | CIFAR10 | 1.8     |   67.2 | 87.6 |
+| 0.0005 | CIFAR10     |    4.8 | 74.0  | 91.8 |
+| **0.0005** | **CIFAR100**    |    **9.0** |  **76.6** | **93.2**  |
+
 ## Table of Contents ##
-- [Introduction](#introduction)
 - [Requirements](#requirements)
 - [Usage](#usage)
   * [Training Options](#training-options)
@@ -29,13 +67,7 @@
     + [CONet Model Creation](#conet-model-instantiation)
     + [Helper functions](#helper-functions)
 
-
-## Introduction ##
-This is the anonymized code for CONet
-
-**CONet** is a NAS algorithm for optimizing the channel sizes of Convolutional Neural Networks.
-CONet measures local indicators after training for a few epochs to expand or shrink the channels of convolutional layers.
-
+  
 
 ### Requirements ###
 We use `Python 3.7`
