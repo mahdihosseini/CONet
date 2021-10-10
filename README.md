@@ -2,9 +2,9 @@
 
 **Exciting News! CONet has been accepted to ICCV 2021 Workshop: Neural Architectures - Past, Present and Future.**
 
-> [**CONet: Channel Optimization for Convolutional Neural Networks**](https://arxiv.org/abs/2108.06822),            
+> [**CONet: Channel Optimization for Convolutional Neural Networks**](https://openaccess.thecvf.com/content/ICCV2021W/NeurArch/html/Hosseini_CONet_Channel_Optimization_for_Convolutional_Neural_Networks_ICCVW_2021_paper.html),            
 > Mahdi S. Hosseini, Jia Shu Zhang, Zhe Liu, Andre Fu, Jingxuan Su, Mathieu Tuli, Konstantinos N. Plataniotis        
-> *In Proceedings of the IEEE/CVF International Conference on Computer Vision ([ICCV2021-NeurArch](https://openaccess.thecvf.com/content/ICCV2021W/NeurArch/html/Hosseini_CONet_Channel_Optimization_for_Convolutional_Neural_Networks_ICCVW_2021_paper.html))*
+> *In Proceedings of the IEEE/CVF International Conference on Computer Vision ([ICCV2021-NeurArch](https://neural-architecture-ppf.github.io/))*
 > 
 
 **CONet** is a NAS algorithm for optimizing the channel sizes of Convolutional Neural Networks.
