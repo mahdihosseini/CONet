@@ -4,7 +4,7 @@
 
 > [**CONet: Channel Optimization for Convolutional Neural Networks**](https://arxiv.org/abs/2108.06822),            
 > Mahdi S. Hosseini, Jia Shu Zhang, Zhe Liu, Andre Fu, Jingxuan Su, Mathieu Tuli, Konstantinos N. Plataniotis        
-> *arXiv technical report ([arXiv: 2108.06822](https://arxiv.org/abs/2108.06822))*
+> *In Proceedings of the IEEE/CVF International Conference on Computer Vision ([ICCV2021-NeurArch](https://openaccess.thecvf.com/content/ICCV2021W/NeurArch/html/Hosseini_CONet_Channel_Optimization_for_Convolutional_Neural_Networks_ICCVW_2021_paper.html))*
 > 
 
 **CONet** is a NAS algorithm for optimizing the channel sizes of Convolutional Neural Networks.
